@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, ...</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, ...</value>
+  </resheader>
+  <data name="InternalServerError" xml:space="preserve">
+    <value>Internal Server Error</value>
+  </data>
+  <data name="TitleRequired" xml:space="preserve">
+    <value>O título é obrigatório.</value>
+  </data>
+  <data name="AmountMustBeGreaterThanZero" xml:space="preserve">
+    <value>O valor deve ser maior que zero.</value>
+  </data>
+  <data name="DateRequired" xml:space="preserve">
+    <value>A data é obrigatória.</value>
+  </data>
+  <data name="DateInvalid" xml:space="preserve">
+    <value>A data deve ser válida no formato aaaa-MM-dd.</value>
+  </data>
+  <data name="PaymentMethodInvalid" xml:space="preserve">
+    <value>A forma de pagamento não é válida.</value>
+  </data>
+</root>

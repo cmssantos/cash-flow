@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cms.CashFlow.Communication\Cms.CashFlow.Communication.csproj" />
+    <ProjectReference Include="..\Cms.CashFlow.Exception\Cms.CashFlow.Exception.csproj" />
+    <ProjectReference Include="..\Cms.CashFlow.Domain\Cms.CashFlow.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.9.1" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{99C59DF5-6E1C-4402-B121-5904B39919A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cms.CashFlow.Api", "src\Cms.CashFlow.Api\Cms.CashFlow.Api.csproj", "{619C0C21-4B8A-4A08-8319-B7C97A00794F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cms.CashFlow.Application", "src\Cms.CashFlow.Application\Cms.CashFlow.Application.csproj", "{677B6FDB-8819-426B-9C44-F4FBB70DCC76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cms.CashFlow.Communication", "src\Cms.CashFlow.Communication\Cms.CashFlow.Communication.csproj", "{46F3F40D-BCD0-4E5A-8EDD-368D5F7759B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cms.CashFlow.Domain", "src\Cms.CashFlow.Domain\Cms.CashFlow.Domain.csproj", "{29EC078A-C302-4D01-A27B-AFD9062D676B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cms.CashFlow.Exception", "src\Cms.CashFlow.Exception\Cms.CashFlow.Exception.csproj", "{D8D16FFA-2056-4E5F-A9B9-F5C17374BA86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cms.CashFlow.Infrastructure", "src\Cms.CashFlow.Infrastructure\Cms.CashFlow.Infrastructure.csproj", "{9D18EC15-2488-4833-AF16-6BB29E98A00E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{619C0C21-4B8A-4A08-8319-B7C97A00794F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{619C0C21-4B8A-4A08-8319-B7C97A00794F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{619C0C21-4B8A-4A08-8319-B7C97A00794F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{619C0C21-4B8A-4A08-8319-B7C97A00794F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{677B6FDB-8819-426B-9C44-F4FBB70DCC76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{677B6FDB-8819-426B-9C44-F4FBB70DCC76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{677B6FDB-8819-426B-9C44-F4FBB70DCC76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{677B6FDB-8819-426B-9C44-F4FBB70DCC76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46F3F40D-BCD0-4E5A-8EDD-368D5F7759B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46F3F40D-BCD0-4E5A-8EDD-368D5F7759B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46F3F40D-BCD0-4E5A-8EDD-368D5F7759B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46F3F40D-BCD0-4E5A-8EDD-368D5F7759B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29EC078A-C302-4D01-A27B-AFD9062D676B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29EC078A-C302-4D01-A27B-AFD9062D676B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29EC078A-C302-4D01-A27B-AFD9062D676B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29EC078A-C302-4D01-A27B-AFD9062D676B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8D16FFA-2056-4E5F-A9B9-F5C17374BA86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8D16FFA-2056-4E5F-A9B9-F5C17374BA86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8D16FFA-2056-4E5F-A9B9-F5C17374BA86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8D16FFA-2056-4E5F-A9B9-F5C17374BA86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D18EC15-2488-4833-AF16-6BB29E98A00E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D18EC15-2488-4833-AF16-6BB29E98A00E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D18EC15-2488-4833-AF16-6BB29E98A00E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D18EC15-2488-4833-AF16-6BB29E98A00E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{619C0C21-4B8A-4A08-8319-B7C97A00794F} = {99C59DF5-6E1C-4402-B121-5904B39919A6}
+		{677B6FDB-8819-426B-9C44-F4FBB70DCC76} = {99C59DF5-6E1C-4402-B121-5904B39919A6}
+		{46F3F40D-BCD0-4E5A-8EDD-368D5F7759B1} = {99C59DF5-6E1C-4402-B121-5904B39919A6}
+		{29EC078A-C302-4D01-A27B-AFD9062D676B} = {99C59DF5-6E1C-4402-B121-5904B39919A6}
+		{D8D16FFA-2056-4E5F-A9B9-F5C17374BA86} = {99C59DF5-6E1C-4402-B121-5904B39919A6}
+		{9D18EC15-2488-4833-AF16-6BB29E98A00E} = {99C59DF5-6E1C-4402-B121-5904B39919A6}
+	EndGlobalSection
+EndGlobal
