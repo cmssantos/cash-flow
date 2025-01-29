@@ -6,26 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Content Include="Resources\*.*">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Remove="Resources\ResourceErrorMessages.resx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Update="Resources\ResourceErrorMessages.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>ResourceErrorMessages.resx</DependentUpon>
-    </Content>
-    <Content Update="Resources\ResourceErrorMessages.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ResourceErrorMessages.Designer.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-
 </Project>

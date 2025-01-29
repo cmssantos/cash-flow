@@ -1,0 +1,10 @@
+{
+    "TitleRequired": "O título é obrigatório.",
+    "AmountGreaterThanZero": "O valor deve ser maior que zero.",
+    "DateNotInFuture": "A data não pode ser no futuro.",
+    "InvalidPaymentType": "O tipo de pagamento é inválido.",
+    "Error": {
+        "NotFound": "O recurso solicitado não foi encontrado.",
+        "ServerError": "Ocorreu um erro inesperado. Por favor, tente novamente mais tarde."
+    }
+}
