@@ -9,7 +9,7 @@ public static class DependencyInjectionExtension
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
         services.AddSingleton<ILocalizer, Localizer>();
-        services.AddSingleton<IRegisterExpenseUseCase, RegisterExpenseUseCase>();
+        services.AddScoped<IRegisterExpenseUseCase, RegisterExpenseUseCase>();
 
         return services;
     }

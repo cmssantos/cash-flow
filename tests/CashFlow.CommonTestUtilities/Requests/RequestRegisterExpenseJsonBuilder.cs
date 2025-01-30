@@ -1,11 +1,10 @@
-using System.ComponentModel.DataAnnotations;
 using Bogus;
 using CashFlow.Communication.Enums;
 using CashFlow.Communication.Requests;
 
 namespace CashFlow.CommonTestUtilities.Requests;
 
-public class RequestRegisterExpenseJsonBuilder
+public static class RequestRegisterExpenseJsonBuilder
 {
     public static RequestRegisterExpenseJson Build()
     {

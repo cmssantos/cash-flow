@@ -2,14 +2,14 @@ using CashFlow.Application.Services;
 using CashFlow.Communication.Requests;
 using CashFlow.Communication.Responses;
 using CashFlow.Domain.Entities;
-using CashFlow.Domain.Repositories.Expenses;
+using CashFlow.Domain.Repositories;
 using CashFlow.Exception.ExceptionsBase;
 
 namespace CashFlow.Application.UseCases.Expenses.Register;
 
-internal class RegisterExpenseUseCase(IExpensesRepository repository, ILocalizer localizer) : IRegisterExpenseUseCase
+internal class RegisterExpenseUseCase(IUnitOfWork unitOfWork, ILocalizer localizer) : IRegisterExpenseUseCase
 {
-    private readonly IExpensesRepository _repository = repository;
+    private readonly IUnitOfWork _unitOfWork = unitOfWork;
     private readonly ILocalizer _localizer = localizer;
 
     public ResponseRegisteredExpenseJson Execute(RequestRegisterExpenseJson request)
@@ -25,7 +25,8 @@ internal class RegisterExpenseUseCase(IExpensesRepository repository, ILocalizer
             PaymentType = (Domain.Enums.PaymentType)request.PaymentType,
         };
 
-        _repository.Add(entity);
+        _unitOfWork.Expenses.Add(entity);
+        _unitOfWork.Commit();
 
         return new ResponseRegisteredExpenseJson();
     }
