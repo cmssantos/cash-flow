@@ -1,8 +1,8 @@
 {
     "TitleRequired": "The title is required.",
-    "AmountGreaterThanZero": "The title is required.",
-    "DateNotInFuture": "The title is required.",
-    "InvalidPaymentType": "The title is required.",
+    "AmountGreaterThanZero": "The amount must be greater than zero.",
+    "DateNotInFuture": "The date cannot be in the future.",
+    "InvalidPaymentType": "The payment type is invalid.",
     "Error": {
         "NotFound": "The requested resource was not found.",
         "ServerError": "An unexpected error occurred. Please try again later."

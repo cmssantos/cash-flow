@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow.Exception", "src\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow.Infrastructure", "src\CashFlow.Infrastructure\CashFlow.Infrastructure.csproj", "{A014992B-1368-4536-8789-DCCE854A0DE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow.Validators.Tests", "tests\CashFlow.Validators.Tests\CashFlow.Validators.Tests.csproj", "{09A8C12C-4A38-471D-B7CD-093FA2FDBC7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow.CommonTestUtilities", "tests\CashFlow.CommonTestUtilities\CashFlow.CommonTestUtilities.csproj", "{9566B59A-03FF-408D-9B9E-C511C0222B2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,14 @@ Global
 		{A014992B-1368-4536-8789-DCCE854A0DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A014992B-1368-4536-8789-DCCE854A0DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A014992B-1368-4536-8789-DCCE854A0DE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09A8C12C-4A38-471D-B7CD-093FA2FDBC7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A8C12C-4A38-471D-B7CD-093FA2FDBC7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A8C12C-4A38-471D-B7CD-093FA2FDBC7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A8C12C-4A38-471D-B7CD-093FA2FDBC7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9566B59A-03FF-408D-9B9E-C511C0222B2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9566B59A-03FF-408D-9B9E-C511C0222B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9566B59A-03FF-408D-9B9E-C511C0222B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9566B59A-03FF-408D-9B9E-C511C0222B2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,5 +72,7 @@ Global
 		{766240C1-4BFA-4835-B530-61978D485B7D} = {98DD6C2F-5654-4F47-AA38-417487A6ACC8}
 		{C8C96EBE-894B-4378-92D1-5D23542ED7A1} = {98DD6C2F-5654-4F47-AA38-417487A6ACC8}
 		{A014992B-1368-4536-8789-DCCE854A0DE2} = {98DD6C2F-5654-4F47-AA38-417487A6ACC8}
+		{09A8C12C-4A38-471D-B7CD-093FA2FDBC7D} = {EFA3A76B-74D6-4C66-8034-1C1B4A2C4827}
+		{9566B59A-03FF-408D-9B9E-C511C0222B2C} = {EFA3A76B-74D6-4C66-8034-1C1B4A2C4827}
 	EndGlobalSection
 EndGlobal
