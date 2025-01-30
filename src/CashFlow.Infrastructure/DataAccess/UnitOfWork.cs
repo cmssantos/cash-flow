@@ -16,5 +16,5 @@ internal class UnitOfWork : IUnitOfWork
 
     public IExpensesRepository Expenses { get; }
 
-    public void Commit() => _dbContext.SaveChanges();
+    public async Task CommitAsync() => await _dbContext.SaveChangesAsync();
 }

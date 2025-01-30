@@ -7,5 +7,5 @@ internal class ExpensesRepository(CashFlowDbContext dbContext) : IExpensesReposi
 {
     private CashFlowDbContext _dbContext { get; } = dbContext;
 
-    public void Add(Expense expense) => _dbContext.Expenses.Add(expense);
+    public async Task AddAsync(Expense expense) => await _dbContext.Expenses.AddAsync(expense);
 }

@@ -1,3 +1,4 @@
+using AutoMapper;
 using CashFlow.Application.Services;
 using CashFlow.Communication.Requests;
 using CashFlow.Communication.Responses;
@@ -7,28 +8,23 @@ using CashFlow.Exception.ExceptionsBase;
 
 namespace CashFlow.Application.UseCases.Expenses.Register;
 
-internal class RegisterExpenseUseCase(IUnitOfWork unitOfWork, ILocalizer localizer) : IRegisterExpenseUseCase
+internal class RegisterExpenseUseCase(IUnitOfWork unitOfWork, ILocalizer localizer, IMapper mapper)
+    : IRegisterExpenseUseCase
 {
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
     private readonly ILocalizer _localizer = localizer;
+    private readonly IMapper _mapper = mapper;
 
-    public ResponseRegisteredExpenseJson Execute(RequestRegisterExpenseJson request)
+    public async Task<ResponseRegisteredExpenseJson> Execute(RequestRegisterExpenseJson request)
     {
         Validade(request);
 
-        var entity = new Expense
-        {
-            Title = request.Title,
-            Description = request.Description,
-            Amount = request.Amount,
-            Date = request.Date,
-            PaymentType = (Domain.Enums.PaymentType)request.PaymentType,
-        };
+        var entity = _mapper.Map<Expense>(request);
 
-        _unitOfWork.Expenses.Add(entity);
-        _unitOfWork.Commit();
+        await _unitOfWork.Expenses.AddAsync(entity);
+        await _unitOfWork.CommitAsync();
 
-        return new ResponseRegisteredExpenseJson();
+        return _mapper.Map<ResponseRegisteredExpenseJson>(entity);
     }
 
     private void Validade(RequestRegisterExpenseJson request)

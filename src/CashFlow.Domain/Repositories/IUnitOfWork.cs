@@ -5,5 +5,5 @@ namespace CashFlow.Domain.Repositories;
 public interface IUnitOfWork
 {
     IExpensesRepository Expenses { get; }
-    void Commit();
+    Task CommitAsync();
 }
