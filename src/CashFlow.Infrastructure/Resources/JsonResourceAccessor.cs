@@ -4,7 +4,7 @@ using CashFlow.Domain.Interfaces;
 
 namespace CashFlow.Infrastructure.Resources;
 
-public class JsonResourceAccessor : IResourceAccessor
+internal class JsonResourceAccessor : IResourceAccessor
 {
     private readonly Dictionary<string, JsonElement> _resources = [];
     private readonly JsonSerializerOptions _jsonOptions;

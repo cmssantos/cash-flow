@@ -1,9 +1,8 @@
-using CashFlow.Application.Interfaces;
 using CashFlow.Domain.Interfaces;
 
 namespace CashFlow.Application.Services;
 
-public class Localizer(IResourceAccessor resourceAccessor) : ILocalizer
+internal class Localizer(IResourceAccessor resourceAccessor) : ILocalizer
 {
     private readonly IResourceAccessor _resourceAccessor = resourceAccessor;
 

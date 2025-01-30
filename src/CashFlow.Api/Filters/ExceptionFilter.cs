@@ -1,4 +1,4 @@
-using CashFlow.Application.Interfaces;
+using CashFlow.Application.Services;
 using CashFlow.Communication.Responses;
 using CashFlow.Exception.ExceptionsBase;
 using Microsoft.AspNetCore.Mvc;

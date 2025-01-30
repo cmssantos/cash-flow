@@ -1,4 +1,4 @@
-﻿using CashFlow.Application.Interfaces;
+﻿using CashFlow.Application.Services;
 using CashFlow.Application.UseCases.Expenses.Register;
 using CashFlow.CommonTestUtilities.Requests;
 using CashFlow.Communication.Enums;

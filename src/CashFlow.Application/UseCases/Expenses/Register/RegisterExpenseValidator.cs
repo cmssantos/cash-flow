@@ -1,4 +1,4 @@
-using CashFlow.Application.Interfaces;
+using CashFlow.Application.Services;
 using CashFlow.Communication.Requests;
 using FluentValidation;
 

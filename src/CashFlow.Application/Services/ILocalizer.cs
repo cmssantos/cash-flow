@@ -1,4 +1,4 @@
-namespace CashFlow.Application.Interfaces;
+namespace CashFlow.Application.Services;
 
 public interface ILocalizer
 {

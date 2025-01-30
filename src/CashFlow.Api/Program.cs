@@ -1,9 +1,7 @@
 using System.Globalization;
 using CashFlow.Api.Filters;
-using CashFlow.Application.Interfaces;
-using CashFlow.Application.Services;
-using CashFlow.Domain.Interfaces;
-using CashFlow.Infrastructure.Resources;
+using CashFlow.Application;
+using CashFlow.Infrastructure;
 using Microsoft.AspNetCore.Localization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,13 +9,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
 builder.Services.AddControllers();
 
-builder.Services.AddSingleton<IResourceAccessor, JsonResourceAccessor>();
-builder.Services.AddScoped<ILocalizer, Localizer>();
-
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddMvc(options => options.Filters.Add(typeof(ExceptionFilter)));
+
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure();
 
 var app = builder.Build();
 
