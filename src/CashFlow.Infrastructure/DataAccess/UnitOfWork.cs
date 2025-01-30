@@ -1,20 +1,10 @@
 using CashFlow.Domain.Repositories;
-using CashFlow.Domain.Repositories.Expenses;
-using CashFlow.Infrastructure.DataAccess.Repositories;
 
 namespace CashFlow.Infrastructure.DataAccess;
 
-internal class UnitOfWork : IUnitOfWork
+internal class UnitOfWork(CashFlowDbContext dbContext) : IUnitOfWork
 {
-    private readonly CashFlowDbContext _dbContext;
-
-    public UnitOfWork(CashFlowDbContext dbContext)
-    {
-        _dbContext = dbContext;
-        Expenses = new ExpensesRepository(_dbContext);
-    }
-
-    public IExpensesRepository Expenses { get; }
+    private readonly CashFlowDbContext _dbContext = dbContext;
 
     public async Task CommitAsync() => await _dbContext.SaveChangesAsync();
 }

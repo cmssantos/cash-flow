@@ -6,10 +6,10 @@ using CashFlow.Exception.ExceptionsBase;
 
 namespace CashFlow.Application.UseCases.Expenses.GetById;
 
-public class GetExpenseByIdUseCase(IExpensesRepository expenseRepository, IMapper mapper, ILocalizer localizer)
+public class GetExpenseByIdUseCase(IExpensesReadOnlyRepository expenseRepository, IMapper mapper, ILocalizer localizer)
     : IGetExpenseByIdUseCase
 {
-    private readonly IExpensesRepository _expenseRepository = expenseRepository;
+    private readonly IExpensesReadOnlyRepository _expenseRepository = expenseRepository;
     private readonly ILocalizer _localizer = localizer;
     private readonly IMapper _mapper = mapper;
 

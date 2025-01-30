@@ -4,12 +4,13 @@ using CashFlow.Communication.Requests;
 using CashFlow.Communication.Responses;
 using CashFlow.Domain.Entities;
 using CashFlow.Domain.Repositories;
+using CashFlow.Domain.Repositories.Expenses;
 using CashFlow.Exception.ExceptionsBase;
 
 namespace CashFlow.Application.UseCases.Expenses.Register;
 
-internal class RegisterExpenseUseCase(IUnitOfWork unitOfWork, ILocalizer localizer, IMapper mapper)
-    : IRegisterExpenseUseCase
+internal class RegisterExpenseUseCase(IExpensesWriteOnlyRepository expensesRepository, IUnitOfWork unitOfWork,
+    ILocalizer localizer, IMapper mapper) : IRegisterExpenseUseCase
 {
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
     private readonly ILocalizer _localizer = localizer;
@@ -21,7 +22,7 @@ internal class RegisterExpenseUseCase(IUnitOfWork unitOfWork, ILocalizer localiz
 
         var entity = _mapper.Map<Expense>(request);
 
-        await _unitOfWork.Expenses.AddAsync(entity);
+        await expensesRepository.AddAsync(entity);
         await _unitOfWork.CommitAsync();
 
         return _mapper.Map<ResponseRegisteredExpenseJson>(entity);
