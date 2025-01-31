@@ -20,7 +20,7 @@ public class ExpensesController : ControllerBase
         [FromServices] IRegisterExpenseUseCase useCase,
         [FromBody] RequestExpenseJson request)
     {
-        var response = await useCase.Execute(request);
+        var response = await useCase.ExecuteAsync(request);
 
         return Created(string.Empty, response);
     }
@@ -30,7 +30,7 @@ public class ExpensesController : ControllerBase
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<IActionResult> GetAllExpenses([FromServices] IGetAllExpenseUseCase useCase)
     {
-        var response = await useCase.Execute();
+        var response = await useCase.ExecuteAsync();
 
         return response.Expenses.Count != 0 ? Ok(response) : NoContent();
     }
@@ -42,7 +42,7 @@ public class ExpensesController : ControllerBase
         [FromServices] IGetExpenseByIdUseCase useCase,
         [FromRoute] long id)
     {
-        var response = await useCase.Execute(id);
+        var response = await useCase.ExecuteAsync(id);
 
         return Ok(response);
     }
@@ -54,7 +54,7 @@ public class ExpensesController : ControllerBase
         [FromServices] IDeleteExpenseUseCase useCase,
         [FromRoute] long id)
     {
-        await useCase.Execute(id);
+        await useCase.ExecuteAsync(id);
 
         return NoContent();
     }
@@ -68,7 +68,7 @@ public class ExpensesController : ControllerBase
         [FromRoute] long id,
         [FromBody] RequestExpenseJson request)
     {
-        await useCase.Execute(id, request);
+        await useCase.ExecuteAsync(id, request);
 
         return NoContent();
     }

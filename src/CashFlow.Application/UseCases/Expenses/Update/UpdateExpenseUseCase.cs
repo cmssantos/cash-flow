@@ -16,7 +16,7 @@ public class UpdateExpenseUseCase(IExpensesUpdateOnlyRepository expenseRepositor
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
     private readonly IMapper _mapper = mapper;
 
-    public async Task Execute(long id, RequestExpenseJson request)
+    public async Task ExecuteAsync(long id, RequestExpenseJson request)
     {
         Validade(request);
 

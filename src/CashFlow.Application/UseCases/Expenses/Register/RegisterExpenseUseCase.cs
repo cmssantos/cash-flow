@@ -16,7 +16,7 @@ internal class RegisterExpenseUseCase(IExpensesWriteOnlyRepository expensesRepos
     private readonly ILocalizer _localizer = localizer;
     private readonly IMapper _mapper = mapper;
 
-    public async Task<ResponseRegisteredExpenseJson> Execute(RequestExpenseJson request)
+    public async Task<ResponseRegisteredExpenseJson> ExecuteAsync(RequestExpenseJson request)
     {
         Validade(request);
 

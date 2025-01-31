@@ -13,7 +13,7 @@ public class GetExpenseByIdUseCase(IExpensesReadOnlyRepository expenseRepository
     private readonly ILocalizer _localizer = localizer;
     private readonly IMapper _mapper = mapper;
 
-    public async Task<ResponseExpenseJson> Execute(long id)
+    public async Task<ResponseExpenseJson> ExecuteAsync(long id)
     {
         var result = await _expenseRepository.GetAsync(id);
 

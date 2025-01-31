@@ -9,7 +9,7 @@ public class GetAllExpenseUseCase(IExpensesReadOnlyRepository expenseRepository,
     private readonly IExpensesReadOnlyRepository _expenseRepository = expenseRepository;
     private readonly IMapper _mapper = mapper;
 
-    public async Task<ResponseExpensesJson> Execute()
+    public async Task<ResponseExpensesJson> ExecuteAsync()
     {
         var result = await _expenseRepository.GetAsync();
 

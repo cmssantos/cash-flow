@@ -6,5 +6,12 @@
     "Error": {
         "NotFound": "O recurso solicitado não foi encontrado.",
         "ServerError": "Ocorreu um erro inesperado. Por favor, tente novamente mais tarde."
+    },
+    "Report": {
+        "Title": "Título",
+        "Description": "Descrição",
+        "Date": "Data",
+        "Amount": "Valor",
+        "PaymentType": "Tipo de pagamento"
     }
 }

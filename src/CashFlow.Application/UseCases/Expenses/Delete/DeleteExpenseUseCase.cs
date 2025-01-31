@@ -12,7 +12,7 @@ public class DeleteExpenseUseCase(IExpensesWriteOnlyRepository expenseRepository
     private readonly ILocalizer _localizer = localizer;
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
 
-    public async Task Execute(long id)
+    public async Task ExecuteAsync(long id)
     {
         var result = await _expenseRepository.DeleteAsync(id);
         if (result is false)
