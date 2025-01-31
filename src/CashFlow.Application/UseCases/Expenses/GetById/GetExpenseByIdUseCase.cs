@@ -15,7 +15,7 @@ public class GetExpenseByIdUseCase(IExpensesReadOnlyRepository expenseRepository
 
     public async Task<ResponseExpenseJson> Execute(long id)
     {
-        var result = await _expenseRepository.GetByIdAsync(id);
+        var result = await _expenseRepository.GetAsync(id);
 
         return result is null
             ? throw new NotFoundException(_localizer.GetString("Error.NotFound"))

@@ -2,11 +2,11 @@ using CashFlow.Application.Services;
 using CashFlow.Communication.Requests;
 using FluentValidation;
 
-namespace CashFlow.Application.UseCases.Expenses.Register;
+namespace CashFlow.Application.UseCases.Expenses;
 
-public class RegisterExpenseValidator : AbstractValidator<RequestRegisterExpenseJson>
+public class ExpenseValidator : AbstractValidator<RequestExpenseJson>
 {
-    public RegisterExpenseValidator(ILocalizer localizer)
+    public ExpenseValidator(ILocalizer localizer)
     {
         RuleFor(expense => expense.Title)
             .NotEmpty()

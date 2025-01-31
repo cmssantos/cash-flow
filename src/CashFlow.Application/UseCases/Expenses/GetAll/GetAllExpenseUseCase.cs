@@ -11,7 +11,7 @@ public class GetAllExpenseUseCase(IExpensesReadOnlyRepository expenseRepository,
 
     public async Task<ResponseExpensesJson> Execute()
     {
-        var result = await _expenseRepository.GetAllAsync();
+        var result = await _expenseRepository.GetAsync();
 
         return new ResponseExpensesJson
         {

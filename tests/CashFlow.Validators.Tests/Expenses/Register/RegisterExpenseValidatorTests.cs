@@ -1,5 +1,5 @@
 ﻿using CashFlow.Application.Services;
-using CashFlow.Application.UseCases.Expenses.Register;
+using CashFlow.Application.UseCases.Expenses;
 using CashFlow.CommonTestUtilities.Requests;
 using CashFlow.Communication.Enums;
 using Moq;
@@ -25,8 +25,8 @@ public class RegisterExpenseValidatorTests
     public void ShouldReturnSuccessWhenExpenseIsValid()
     {
         // Arrange
-        var validator = new RegisterExpenseValidator(_localizerMock.Object);
-        var request = RequestRegisterExpenseJsonBuilder.Build();
+        var validator = new ExpenseValidator(_localizerMock.Object);
+        var request = RequestExpenseJsonBuilder.Build();
 
         // Act
         var result = validator.Validate(request);
@@ -42,8 +42,8 @@ public class RegisterExpenseValidatorTests
     public void ShouldReturnErrorWhenTitleIsEmpty(string? title)
     {
         // Arrange
-        var validator = new RegisterExpenseValidator(_localizerMock.Object);
-        var request = RequestRegisterExpenseJsonBuilder.Build();
+        var validator = new ExpenseValidator(_localizerMock.Object);
+        var request = RequestExpenseJsonBuilder.Build();
         request.Title = title!;
 
         // Act
@@ -58,8 +58,8 @@ public class RegisterExpenseValidatorTests
     public void ShouldReturnErrorWhenDateIsInFuture()
     {
         // Arrange
-        var validator = new RegisterExpenseValidator(_localizerMock.Object);
-        var request = RequestRegisterExpenseJsonBuilder.Build();
+        var validator = new ExpenseValidator(_localizerMock.Object);
+        var request = RequestExpenseJsonBuilder.Build();
         request.Date = DateOnly.FromDateTime(DateTime.Now.AddDays(1));
 
         // Act
@@ -74,8 +74,8 @@ public class RegisterExpenseValidatorTests
     public void ShouldReturnErrorWhenPaymentTypeIsInvalid()
     {
         // Arrange
-        var validator = new RegisterExpenseValidator(_localizerMock.Object);
-        var request = RequestRegisterExpenseJsonBuilder.Build();
+        var validator = new ExpenseValidator(_localizerMock.Object);
+        var request = RequestExpenseJsonBuilder.Build();
         request.PaymentType = (PaymentType)99;
 
         // Act
@@ -92,8 +92,8 @@ public class RegisterExpenseValidatorTests
     public void ShouldReturnErrorWhenAmountIsLessOrEqualToZero(decimal amount)
     {
         // Arrange
-        var validator = new RegisterExpenseValidator(_localizerMock.Object);
-        var request = RequestRegisterExpenseJsonBuilder.Build();
+        var validator = new ExpenseValidator(_localizerMock.Object);
+        var request = RequestExpenseJsonBuilder.Build();
         request.Amount = amount;
 
         // Act
